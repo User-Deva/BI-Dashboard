@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Global Financial Markets 2000–2026</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: sans-serif; background: #0d1117; color: #e6edf3; min-height: 100vh; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 1.2rem 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; }
+    .header-left h1 { font-size: 1.25rem; font-weight: 500; color: #e6edf3; }
+    .header-left p { font-size: 0.75rem; color: #8b949e; margin-top: 3px; }
+    .header-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+    .badge { font-size: 0.7rem; padding: 3px 10px; border-radius: 20px; font-weight: 500; }
+    .badge-blue  { background: #1f3a5f; color: #79c0ff; border: 1px solid #1f6feb; }
+    .badge-green { background: #1a3a2a; color: #56d364; border: 1px solid #2ea043; }
+    .badge-amber { background: #3a2a0a; color: #e3b341; border: 1px solid #9e6a03; }
+    .badge-pink  { background: #3a1a2a; color: #f778ba; border: 1px solid #8d1f6b; }
+    .stats-bar { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.65rem 2rem; display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .stat { display: flex; flex-direction: column; gap: 2px; }
+    .stat-label { font-size: 0.68rem; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; }
+    .stat-value { font-size: 0.95rem; font-weight: 500; color: #e6edf3; }
+    .asset-strip { background: #0d1117; padding: 0.75rem 2rem; display: flex; gap: 10px; flex-wrap: wrap; border-bottom: 1px solid #21262d; }
+    .asset-pill { font-size: 0.72rem; padding: 4px 12px; border-radius: 20px; border: 1px solid #30363d; color: #8b949e; display: flex; align-items: center; gap: 5px; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; }
+    .container { max-width: 1280px; margin: 1.75rem auto; padding: 0 1.5rem; }
+    .card { background: #161b22; border: 1px solid #30363d; border-radius: 10px; overflow: hidden; }
+    .card-header { padding: 0.85rem 1.25rem; border-bottom: 1px solid #21262d; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+    .card-title { font-size: 0.8rem; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; }
+    .card-hint { font-size: 0.72rem; color: #484f58; }
+    .card-body { padding: 1.25rem; }
+    .questions { margin-top: 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+    .q-group { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 1rem 1.25rem; }
+    .q-group-title { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+    .q-item { display: flex; gap: 8px; margin-bottom: 0.6rem; font-size: 0.78rem; color: #8b949e; line-height: 1.5; }
+    .q-num { min-width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 500; margin-top: 1px; flex-shrink: 0; }
+    footer { text-align: center; padding: 1.5rem; font-size: 0.72rem; color: #484f58; border-top: 1px solid #21262d; margin-top: 2rem; }
+    @media (max-width: 600px) { header { padding: 1rem; } .stats-bar { gap: 1rem; padding: 0.65rem 1rem; } .container { padding: 0 1rem; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <h1>Global Financial Markets 2000 – 2026</h1>
+      <p>Interactive market intelligence dashboard powered by Tableau Public</p>
+    </div>
+    <div class="header-badges">
+      <span class="badge badge-blue">Stock Indices</span>
+      <span class="badge badge-amber">Commodities</span>
+      <span class="badge badge-green">Cryptocurrencies</span>
+      <span class="badge badge-pink">Currencies</span>
+    </div>
+  </header>
+
+  <div class="stats-bar">
+    <div class="stat"><span class="stat-label">Total records</span><span class="stat-value">186,356</span></div>
+    <div class="stat"><span class="stat-label">Assets tracked</span><span class="stat-value">34</span></div>
+    <div class="stat"><span class="stat-label">Date range</span><span class="stat-value">Jan 2000 – Apr 2026</span></div>
+    <div class="stat"><span class="stat-label">Asset types</span><span class="stat-value">4</span></div>
+    <div class="stat"><span class="stat-label">Data fields</span><span class="stat-value">Open · High · Low · Close · Volume</span></div>
+  </div>
+
+  <div class="asset-strip">
+    <div class="asset-pill"><span class="dot" style="background:#79c0ff"></span>S&amp;P500 · NASDAQ · DAX · FTSE100 · Nikkei225 · SENSEX · HSI · KOSPI · Shanghai · NIFTY50</div>
+    <div class="asset-pill"><span class="dot" style="background:#e3b341"></span>Gold · Silver · Crude Oil · Brent · Natural Gas · Copper · Corn · Wheat</div>
+    <div class="asset-pill"><span class="dot" style="background:#56d364"></span>Bitcoin · Ethereum · BNB · Ripple · Dogecoin · Cardano · Litecoin · Solana</div>
+    <div class="asset-pill"><span class="dot" style="background:#f778ba"></span>EUR/USD · GBP/USD · JPY/USD · INR/USD · CNY/USD · AUD/USD · CAD/USD · CHF/USD</div>
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Live interactive dashboard</span>
+        <span class="card-hint">Use filters and legends inside to explore · Click any element to drill down</span>
+      </div>
+      <div class="card-body">
+        <div class='tableauPlaceholder' id='viz1776190003072' style='position: relative'>
+          <noscript><a href='#'><img alt='Global Fin Mrkt 2000-26' src='https://public.tableau.com/static/images/Gl/GlobalFinancialMarkets2000-2026/GlobalFinMrkt2000-26/1_rss.png' style='border: none' /></a></noscript>
+          <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='GlobalFinancialMarkets2000-2026/GlobalFinMrkt2000-26' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https://public.tableau.com/static/images/Gl/GlobalFinancialMarkets2000-2026/GlobalFinMrkt2000-26/1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+            <param name='filter' value='publish=yes' />
+          </object>
+        </div>
+        <script type='text/javascript'>
+          var divElement = document.getElementById('viz1776190003072');
+          var vizElement = divElement.getElementsByTagName('object')[0];
+          if (divElement.offsetWidth > 800) { vizElement.style.width='100%'; vizElement.style.height=(divElement.offsetWidth*0.75)+'px'; }
+          else if (divElement.offsetWidth > 500) { vizElement.style.width='100%'; vizElement.style.height=(divElement.offsetWidth*0.75)+'px'; }
+          else { vizElement.style.width='100%'; vizElement.style.height='1427px'; }
+          var scriptElement = document.createElement('script');
+          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+      </div>
+    </div>
+
+    <div class="questions">
+      <div class="q-group">
+        <div class="q-group-title" style="color:#79c0ff;">Stock market questions</div>
+        <div class="q-item"><span class="q-num" style="background:#1f3a5f;color:#79c0ff;">1</span>Which stock index grew the most from 2000 to 2026 — S&amp;P500, DAX, or Nikkei?</div>
+        <div class="q-item"><span class="q-num" style="background:#1f3a5f;color:#79c0ff;">2</span>Did emerging markets (SENSEX, KOSPI) outperform developed markets over 25 years?</div>
+        <div class="q-item"><span class="q-num" style="background:#1f3a5f;color:#79c0ff;">3</span>How long did it take the S&amp;P500 to fully recover after the 2008 financial crisis?</div>
+        <div class="q-item"><span class="q-num" style="background:#1f3a5f;color:#79c0ff;">4</span>Which index had the sharpest single-day drop during the COVID-19 crash in March 2020?</div>
+      </div>
+
+      <div class="q-group">
+        <div class="q-group-title" style="color:#e3b341;">Commodity questions</div>
+        <div class="q-item"><span class="q-num" style="background:#3a2a0a;color:#e3b341;">5</span>Was Gold truly a safe haven in 2008 and 2020 — did its price rise when stocks fell?</div>
+        <div class="q-item"><span class="q-num" style="background:#3a2a0a;color:#e3b341;">6</span>Did Natural Gas prices spike during the Russia-Ukraine war in 2022, and by how much?</div>
+        <div class="q-item"><span class="q-num" style="background:#3a2a0a;color:#e3b341;">7</span>Which was more stable over the last decade — Gold or Silver?</div>
+        <div class="q-item"><span class="q-num" style="background:#3a2a0a;color:#e3b341;">8</span>How closely do WTI and Brent Crude prices move — are they always in sync?</div>
+      </div>
+
+      <div class="q-group">
+        <div class="q-group-title" style="color:#56d364;">Cryptocurrency questions</div>
+        <div class="q-item"><span class="q-num" style="background:#1a3a2a;color:#56d364;">9</span>How many times did Bitcoin's price double within a single calendar year?</div>
+        <div class="q-item"><span class="q-num" style="background:#1a3a2a;color:#56d364;">10</span>Did Ethereum follow Bitcoin's trend exactly, or did it diverge at key moments?</div>
+        <div class="q-item"><span class="q-num" style="background:#1a3a2a;color:#56d364;">11</span>Which cryptocurrency had the most extreme single-day price swing in the dataset?</div>
+        <div class="q-item"><span class="q-num" style="background:#1a3a2a;color:#56d364;">12</span>When did crypto prices peak — was it 2021 or has 2024–26 surpassed it?</div>
+      </div>
+
+      <div class="q-group">
+        <div class="q-group-title" style="color:#f778ba;">Currency questions</div>
+        <div class="q-item"><span class="q-num" style="background:#3a1a2a;color:#f778ba;">13</span>How much has the INR weakened against the USD from 2000 to 2026?</div>
+        <div class="q-item"><span class="q-num" style="background:#3a1a2a;color:#f778ba;">14</span>Did the EUR/USD drop significantly after the 2016 Brexit vote?</div>
+        <div class="q-item"><span class="q-num" style="background:#3a1a2a;color:#f778ba;">15</span>Which currency was most resilient against the USD during global downturns?</div>
+        <div class="q-item"><span class="q-num" style="background:#3a1a2a;color:#f778ba;">16</span>How did the CNY/USD rate shift after the US-China trade war began in 2018?</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Global Financial Markets Dashboard &mdash; 186,356 records · 34 assets · 2000–2026 &mdash; Powered by Tableau Public
+  </footer>
+
+</body>
+</html>
