@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Demand Forecasting Dashboard</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: sans-serif;
+      background: #f0f2f5;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #1a1a2e;
+      color: white;
+      padding: 1.2rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    header span {
+      font-size: 0.8rem;
+      color: #a0aec0;
+    }
+
+    .info-bar {
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 0.6rem 2rem;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .info-bar .stat {
+      font-size: 0.78rem;
+      color: #555;
+    }
+
+    .info-bar .stat strong {
+      color: #1a1a2e;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+    }
+
+    .card-title {
+      font-size: 0.85rem;
+      color: #718096;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .tableau-wrap {
+      width: 100%;
+      position: relative;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.78rem;
+      color: #a0aec0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Demand Forecasting Dashboard</h1>
+    <span>Built with Tableau Public</span>
+  </header>
+
+  <div class="info-bar">
+    <div class="stat">Rows: <strong>76,000</strong></div>
+    <div class="stat">Columns: <strong>16</strong></div>
+    <div class="stat">Categories: <strong>Electronics, Clothing, Groceries</strong></div>
+    <div class="stat">Regions: <strong>North, South, East, West</strong></div>
+    <div class="stat">Period: <strong>2022 – 2023</strong></div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <p class="card-title">Interactive Dashboard — use filters inside to explore</p>
+      <div class="tableau-wrap">
+
+        <!-- Tableau Embed Code -->
+        <div class='tableauPlaceholder' id='viz1776178847372' style='position: relative'>
+          <noscript>
+            <a href='#'>
+              <img alt='Demand Forecasting'
+                src='https://public.tableau.com/static/images/De/DemandForecasting_17761788157530/DemandForecasting/1_rss.png'
+                style='border: none' />
+            </a>
+          </noscript>
+          <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='DemandForecasting_17761788157530/DemandForecasting' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https://public.tableau.com/static/images/De/DemandForecasting_17761788157530/DemandForecasting/1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+            <param name='filter' value='publish=yes' />
+          </object>
+        </div>
+        <script type='text/javascript'>
+          var divElement = document.getElementById('viz1776178847372');
+          var vizElement = divElement.getElementsByTagName('object')[0];
+          if (divElement.offsetWidth > 800) {
+            vizElement.style.width = '100%';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+          } else if (divElement.offsetWidth > 500) {
+            vizElement.style.width = '100%';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+          } else {
+            vizElement.style.width = '100%';
+            vizElement.style.height = '1577px';
+          }
+          var scriptElement = document.createElement('script');
+          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Demand Forecasting Dashboard &mdash; Data: 76,000 records &mdash; Powered by Tableau Public
+  </footer>
+
+</body>
+</html>
