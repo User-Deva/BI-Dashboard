@@ -3,8 +3,6 @@
 An interactive BI dashboard built with Tableau Public, analyzing 76,000 rows of demand forecasting data across stores, regions, product categories, and seasons.
 
 ## Live Dashboard
-[View on GitHub Pages](https://YOUR_USERNAME.github.io/demand-forecasting-dashboard)
-
 [View on Tableau Public](https://public.tableau.com/views/DemandForecasting_17761788157530/DemandForecasting)
 
 ## Dataset Overview
